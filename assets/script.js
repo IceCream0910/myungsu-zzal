@@ -87,8 +87,8 @@ function sendImage() {
                 description: '',
                 imageUrl: imgLink,
                 link: {
-                    mobileWebUrl: 'https://myungsu.vercel.app',
-                    webUrl: 'https://myungsu.vercel.app',
+                    mobileWebUrl: 'https://myungsu.sungil.me',
+                    webUrl: 'https://myungsu.sungil.me',
                 },
             },
         });
