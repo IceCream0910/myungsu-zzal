@@ -12,6 +12,7 @@ $(function () {
     }).done(function (response) {
         console.log(response.items[0].link);
         if (response) {
+            $('#result').html('');
             for (var i = 0; i < response.items.length; i++) {
                 if (response.items[i].fileFormat != 'image/') { //이미지 아님
                     $('#result').append(`
@@ -45,6 +46,7 @@ function submit() {
         }).done(function (response) {
             console.log(response.items[0].link);
             if (response) {
+                $('#result').html('');
                 for (var i = 0; i < response.items.length; i++) {
                     if (response.items[i].fileFormat != 'image/') { //이미지 아님
                         $('#result').append(`
