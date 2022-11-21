@@ -6,7 +6,7 @@ $(function () {
     const defaultKeywords = ['분노', '슬픔', '우울', '귀찮', '피곤']
     var random = Math.floor(Math.random() * defaultKeywords.length);
     $.ajax({
-        url: 'https://www.googleapis.com/customsearch/v1?key=AIzaSyCSJZaed6FebVZm2mEqbeIeHyspQfHKjwI&cx=35cc76baf4e73d7f8&searchType=image&q=박명수 짤' + defaultKeywords[random],
+        url: 'https://www.googleapis.com/customsearch/v1?key=AIzaSyDLaCdl1ckCDfURHjCGwcRRLnu0Afrsrwo&cx=35cc76baf4e73d7f8&searchType=image&q=박명수 짤' + defaultKeywords[random],
         type: 'GET',
     }).done(function (response) {
         console.log(response.items[0].link);
@@ -43,7 +43,7 @@ function submit() {
         lastQuery = text;
         lastIndex = 0;
         $.ajax({
-            url: 'https://www.googleapis.com/customsearch/v1?key=AIzaSyCSJZaed6FebVZm2mEqbeIeHyspQfHKjwI&cx=35cc76baf4e73d7f8&searchType=image&q=박명수 짤 ' + text,
+            url: 'https://www.googleapis.com/customsearch/v1?key=AIzaSyDLaCdl1ckCDfURHjCGwcRRLnu0Afrsrwo&cx=35cc76baf4e73d7f8&searchType=image&q=박명수 짤 ' + text,
             type: 'GET',
         }).done(function (response) {
             console.log(response.items[0].link);
@@ -80,7 +80,7 @@ function loadMore() {
     const text = $('#text-input').val();
     if (text) {
         $.ajax({
-            url: 'https://www.googleapis.com/customsearch/v1?key=AIzaSyCSJZaed6FebVZm2mEqbeIeHyspQfHKjwI&cx=35cc76baf4e73d7f8&searchType=image&q=박명수 짤 ' + lastQuery + '&start=' + lastIndex,
+            url: 'https://www.googleapis.com/customsearch/v1?key=AIzaSyDLaCdl1ckCDfURHjCGwcRRLnu0Afrsrwo&cx=35cc76baf4e73d7f8&searchType=image&q=박명수 짤 ' + lastQuery + '&start=' + lastIndex,
             type: 'GET',
         }).done(function (response) {
             console.log(response.items[0].link);
